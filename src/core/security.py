@@ -11,7 +11,12 @@ from .config import get_settings
 settings = get_settings()
 
 # Password hashing context
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+# Using pbkdf2_sha256 instead of bcrypt to avoid 72 byte limitation issues
+pwd_context = CryptContext(
+    schemes=["pbkdf2_sha256"],
+    deprecated="auto",
+    pbkdf2_sha256__default_rounds=200000,  # Secure number of rounds
+)
 
 
 # ============================================================================
@@ -21,7 +26,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 def hash_password(password: str) -> str:
     """
-    Hash a password using bcrypt.
+    Hash a password using PBKDF2-SHA256.
 
     Args:
         password: Plain text password

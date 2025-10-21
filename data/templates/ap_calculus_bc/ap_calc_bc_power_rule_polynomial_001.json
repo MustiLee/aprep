@@ -1,0 +1,99 @@
+{
+  "template_id": "ap_calc_bc_power_rule_polynomial_001",
+  "version": "1.0",
+  "created_at": "2025-10-17 03:26:04.748623",
+  "created_by": "agent.template_crafter",
+  "course_id": "ap_calculus_bc",
+  "unit_id": "u2_differentiation",
+  "topic_id": "t2_power_rule",
+  "learning_objectives": [],
+  "difficulty_range": [
+    0.4,
+    0.7
+  ],
+  "calculator": "No-Calc",
+  "estimated_time_sec": 90,
+  "stem": "Find the derivative of f(x) = {{a}}x^{{n}} + {{c}}x^{{b}}",
+  "params": {
+    "a": {
+      "type": "integer",
+      "values": null,
+      "weights": null,
+      "templates": null,
+      "constraints": null,
+      "range": [
+        2.0,
+        8.0
+      ]
+    },
+    "b": {
+      "type": "integer",
+      "values": null,
+      "weights": null,
+      "templates": null,
+      "constraints": null,
+      "range": [
+        3.0,
+        6.0
+      ]
+    },
+    "c": {
+      "type": "integer",
+      "values": null,
+      "weights": null,
+      "templates": null,
+      "constraints": null,
+      "range": [
+        -5.0,
+        5.0
+      ]
+    },
+    "n": {
+      "type": "integer",
+      "values": null,
+      "weights": null,
+      "templates": null,
+      "constraints": null,
+      "range": [
+        2.0,
+        5.0
+      ]
+    }
+  },
+  "solution_template": null,
+  "solution_steps": [
+    "Apply the power rule to each term",
+    "For ax^n, derivative is n\u00b7a\u00b7x^(n-1)",
+    "For cx^b, derivative is b\u00b7c\u00b7x^(b-1)",
+    "Combine the results"
+  ],
+  "distractor_rules": [
+    {
+      "rule_id": "forgot_to_multiply_by_exponent",
+      "description": "Forgot to multiply by exponent",
+      "generation": "{{wrong_value}}",
+      "misconception": "Forgot to multiply by exponent",
+      "examples": null
+    },
+    {
+      "rule_id": "subtracted_1_instead_of_multiplying",
+      "description": "Subtracted 1 instead of multiplying",
+      "generation": "{{wrong_value}}",
+      "misconception": "Subtracted 1 instead of multiplying",
+      "examples": null
+    },
+    {
+      "rule_id": "algebraic_error_2",
+      "description": "Generic algebraic error",
+      "generation": "{{error_value}}",
+      "misconception": null,
+      "examples": null
+    }
+  ],
+  "answer_format": "polynomial",
+  "num_options": 4,
+  "tags": [],
+  "constraints": {},
+  "similarity_check_required": true,
+  "similarity_threshold": 0.8
+}

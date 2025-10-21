@@ -1,0 +1,90 @@
+{
+  "template_id": "ap_calc_bc_t2_power_rule_polynomial_001",
+  "version": "1.0",
+  "created_at": "2025-10-17 03:29:51.417206",
+  "created_by": "agent.template_crafter",
+  "course_id": "ap_calculus_bc",
+  "unit_id": "u2_differentiation",
+  "topic_id": "t2_power_rule",
+  "learning_objectives": [],
+  "difficulty_range": [
+    0.4,
+    0.7
+  ],
+  "calculator": "No-Calc",
+  "estimated_time_sec": 90,
+  "stem": "Find the derivative of f({{variable}}) = {{coefficient}}{{variable}}^{{exponent}}.",
+  "params": {
+    "coefficient": {
+      "type": "integer",
+      "values": null,
+      "weights": null,
+      "templates": null,
+      "constraints": null,
+      "range": [
+        2.0,
+        8.0
+      ]
+    },
+    "exponent": {
+      "type": "integer",
+      "values": null,
+      "weights": null,
+      "templates": null,
+      "constraints": null,
+      "range": [
+        3.0,
+        7.0
+      ]
+    },
+    "variable": {
+      "type": "choice",
+      "values": null,
+      "weights": null,
+      "templates": null,
+      "constraints": null,
+      "range": null
+    }
+  },
+  "solution_template": null,
+  "solution_steps": [
+    "Apply the power rule: d/d{{variable}}[a{{variable}}^n] = an{{variable}}^(n-1)",
+    "For f({{variable}}) = {{coefficient}}{{variable}}^{{exponent}}, we have a = {{coefficient}} and n = {{exponent}}",
+    "f'({{variable}}) = {{coefficient}} \u00d7 {{exponent}} \u00d7 {{variable}}^({{exponent}}-1)",
+    "f'({{variable}}) = {{coefficient * exponent}}{{variable}}^{{exponent - 1}}"
+  ],
+  "distractor_rules": [
+    {
+      "rule_id": "forgot_to_multiply_by_exponent",
+      "description": "Forgot to multiply by exponent",
+      "generation": "{{wrong_value}}",
+      "misconception": "Forgot to multiply by exponent",
+      "examples": null
+    },
+    {
+      "rule_id": "subtracted_1_instead_of_multiplying",
+      "description": "Subtracted 1 instead of multiplying",
+      "generation": "{{wrong_value}}",
+      "misconception": "Subtracted 1 instead of multiplying",
+      "examples": null
+    },
+    {
+      "rule_id": "algebraic_error_2",
+      "description": "Generic algebraic error",
+      "generation": "{{error_value}}",
+      "misconception": null,
+      "examples": null
+    }
+  ],
+  "answer_format": "multiple_choice",
+  "num_options": 4,
+  "tags": [
+    "power_rule",
+    "derivatives",
+    "polynomial_functions",
+    "basic_differentiation"
+  ],
+  "constraints": {},
+  "similarity_check_required": true,
+  "similarity_threshold": 0.8
+}

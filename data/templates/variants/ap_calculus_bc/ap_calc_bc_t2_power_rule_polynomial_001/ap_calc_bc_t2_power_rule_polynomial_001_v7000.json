@@ -1,0 +1,43 @@
+{
+  "id": "ap_calc_bc_t2_power_rule_polynomial_001_v7000",
+  "version": "1.0",
+  "template_id": "ap_calc_bc_t2_power_rule_polynomial_001",
+  "course_id": "ap_calculus_bc",
+  "unit_id": "u2_differentiation",
+  "topic_id": "t2_power_rule",
+  "stimulus": "Find the derivative of f(t) = 4t^3.",
+  "options": [
+    "f'(t) = 12t^2x",
+    "f'(t) = 12t^2",
+    "Option C",
+    "2f'(t) = 12t^2"
+  ],
+  "answer_index": 1,
+  "solution": "f'(t) = 12t^2",
+  "solution_steps": null,
+  "tags": [
+    "power_rule",
+    "derivatives",
+    "polynomial_functions",
+    "basic_differentiation"
+  ],
+  "metadata": {
+    "calculator": "No-Calc",
+    "difficulty_est": 0.4,
+    "time_sec_est": 90,
+    "distractor_quality": null
+  },
+  "origin": {
+    "created_by": "agent.parametric_generator",
+    "created_at": "2025-10-17T11:07:54.352237",
+    "seed": 7000,
+    "parameter_instantiation": {
+      "coefficient": 4,
+      "exponent": 3,
+      "variable": "t"
+    },
+    "derived_values": {}
+  },
+  "analytics": null,
+  "audit": null
+}

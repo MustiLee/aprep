@@ -1,0 +1,105 @@
+{
+  "template_id": "t2_power_rule_polynomial_derivative",
+  "version": "1.0",
+  "created_at": "2025-10-17 03:23:49.383517",
+  "created_by": "agent.template_crafter",
+  "course_id": "ap_calculus_bc",
+  "unit_id": "u2_differentiation",
+  "topic_id": "t2_power_rule",
+  "learning_objectives": [
+    "Apply power rule to polynomial functions"
+  ],
+  "difficulty_range": [
+    0.4,
+    0.7
+  ],
+  "calculator": "No-Calc",
+  "estimated_time_sec": 90,
+  "stem": "Find the derivative of f({{variable}}) = {{coefficient}}{{variable}}^{{exponent}} + {{constant_term}}",
+  "params": {
+    "coefficient": {
+      "type": "integer",
+      "values": null,
+      "weights": null,
+      "templates": null,
+      "constraints": null,
+      "range": [
+        2.0,
+        8.0
+      ]
+    },
+    "exponent": {
+      "type": "integer",
+      "values": null,
+      "weights": null,
+      "templates": null,
+      "constraints": null,
+      "range": [
+        2.0,
+        6.0
+      ]
+    },
+    "constant_term": {
+      "type": "integer",
+      "values": null,
+      "weights": null,
+      "templates": null,
+      "constraints": null,
+      "range": [
+        -10.0,
+        10.0
+      ]
+    },
+    "variable": {
+      "type": "string",
+      "values": [
+        "x",
+        "t"
+      ],
+      "weights": null,
+      "templates": null,
+      "constraints": null,
+      "range": null
+    }
+  },
+  "solution_template": null,
+  "solution_steps": [
+    "Apply power rule to {{coefficient}}{{variable}}^{{exponent}}",
+    "Apply power rule to constant term {{constant_term}}",
+    "Combine terms using sum rule"
+  ],
+  "distractor_rules": [
+    {
+      "rule_id": "forgot_to_multiply_by_exponent",
+      "description": "Forgot to multiply by exponent",
+      "generation": "{{wrong_value}}",
+      "misconception": "Forgot to multiply by exponent",
+      "examples": null
+    },
+    {
+      "rule_id": "subtracted_1_instead_of_multiplying",
+      "description": "Subtracted 1 instead of multiplying",
+      "generation": "{{wrong_value}}",
+      "misconception": "Subtracted 1 instead of multiplying",
+      "examples": null
+    },
+    {
+      "rule_id": "algebraic_error_2",
+      "description": "Generic algebraic error",
+      "generation": "{{error_value}}",
+      "misconception": null,
+      "examples": null
+    }
+  ],
+  "answer_format": "multiple_choice",
+  "num_options": 4,
+  "tags": [
+    "power_rule",
+    "polynomial_derivatives",
+    "basic_differentiation",
+    "sum_rule"
+  ],
+  "constraints": {},
+  "similarity_check_required": true,
+  "similarity_threshold": 0.8
+}

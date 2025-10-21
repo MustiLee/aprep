@@ -1,0 +1,41 @@
+# Simple Docker Compose - Only Database Services
+# Run API manually with: uvicorn src.api.main:app --reload
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: aprep-postgres
+    environment:
+      POSTGRES_USER: aprep
+      POSTGRES_PASSWORD: aprep
+      POSTGRES_DB: aprep_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aprep"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # Redis (for caching)
+  redis:
+    image: redis:7-alpine
+    container_name: aprep-redis
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:

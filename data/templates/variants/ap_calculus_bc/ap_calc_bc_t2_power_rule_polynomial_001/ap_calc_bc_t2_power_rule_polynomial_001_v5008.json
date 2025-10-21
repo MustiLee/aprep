@@ -1,0 +1,43 @@
+{
+  "id": "ap_calc_bc_t2_power_rule_polynomial_001_v5008",
+  "version": "1.0",
+  "template_id": "ap_calc_bc_t2_power_rule_polynomial_001",
+  "course_id": "ap_calculus_bc",
+  "unit_id": "u2_differentiation",
+  "topic_id": "t2_power_rule",
+  "stimulus": "Find the derivative of f(x) = 2x^7.",
+  "options": [
+    "Option C",
+    "2f'(x) = 14x^6",
+    "f'(x) = 14x^6",
+    "f'(2x) = 142x^6"
+  ],
+  "answer_index": 2,
+  "solution": "f'(x) = 14x^6",
+  "solution_steps": null,
+  "tags": [
+    "power_rule",
+    "derivatives",
+    "polynomial_functions",
+    "basic_differentiation"
+  ],
+  "metadata": {
+    "calculator": "No-Calc",
+    "difficulty_est": 0.4,
+    "time_sec_est": 90,
+    "distractor_quality": null
+  },
+  "origin": {
+    "created_by": "agent.parametric_generator",
+    "created_at": "2025-10-17T11:06:43.451527",
+    "seed": 5008,
+    "parameter_instantiation": {
+      "coefficient": 2,
+      "exponent": 7,
+      "variable": "x"
+    },
+    "derived_values": {}
+  },
+  "analytics": null,
+  "audit": null
+}
